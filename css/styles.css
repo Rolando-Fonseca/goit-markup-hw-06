@@ -191,7 +191,8 @@ ul {
 }
 
 .card_port:hover {
-  box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
+  box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.06);
 }
 
 .item {
@@ -238,7 +239,7 @@ ul {
 
 .current::after {
   position: absolute;
-  content: '';
+  content: "";
   width: 100%;
   height: 4px;
   background-color: var(--color_hover);
@@ -255,7 +256,11 @@ ul {
 }
 .hero {
   margin: 0 auto;
-  background-image: linear-gradient(to bottom, rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+  background-image: linear-gradient(
+      to bottom,
+      rgba(47, 48, 58, 0.4),
+      rgba(47, 48, 58, 0.4)
+    ),
     url(../imag/hero_img.jpg);
   background-size: cover;
 }
@@ -284,7 +289,8 @@ ul {
 .button_contact:hover {
   background-color: var(--color_hover);
   color: var(--primary-color);
-  box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16), 0px 4px 4px 0px rgba(0, 0, 0, 0.06);
+  box-shadow: 1px 4px 6px 0 rgba(0, 0, 0, 0.16),
+    0px 4px 4px 0px rgba(0, 0, 0, 0.06);
 }
 
 .menu_services {
@@ -654,6 +660,12 @@ h3 {
   align-items: center;
 }
 
+.form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .form__title {
   display: flex;
   justify-content: center;
@@ -664,24 +676,13 @@ h3 {
 }
 .form__text {
   position: relative;
-  left: 10%;
-  padding-top: 28px;
   color: var(--font2-color);
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
 }
 
 .form__label {
-  position: absolute;
-  left: 0%;
-  top: -70%;
-  padding-top: 50px;
-  border: 5px;
-}
-
-.form__textarea {
-  position: absolute;
-  left: 0%;
-  top: -35%;
-  padding-top: 50px;
   border: 5px;
 }
 
@@ -693,29 +694,28 @@ h3 {
   padding: 0px 42px;
 }
 
+.form__input:focus + .form__img {
+  color: var(--color_hover);
+}
+
 .form__label:hover .form__img {
-  fill: var(--color_hover);
+  color: var(--color_hover);
 }
 
 .form__img {
   position: absolute;
-  fill: var(--color_icons);
+  color: var(--color_icons);
   width: 18px;
   height: 18px;
-  top: 55%;
-  left: 2%;
+  top: 32px;
+  left: 12px;
 }
 
 .textarea {
   width: 448px;
-  height: 105px;
+  height: 120px;
 }
 
-.terms {
-  position: relative;
-  cursor: pointer;
-  display: flex;
-}
 .terms:hover .checkbox-unchecked {
   fill: var(--color_hover);
 }
@@ -746,18 +746,13 @@ h3 {
   visibility: visible;
 }
 
-.aaa {
-  display: flex;
-  justify-content: center;
-}
-
 .checkbox__text {
   color: var(--font2-color);
   width: 400px;
   height: 24px;
 }
 
-.bbb {
+.check__bt {
   display: flex;
   justify-content: center;
   padding-top: 30px;
