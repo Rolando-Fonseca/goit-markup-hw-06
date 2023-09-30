@@ -156,6 +156,8 @@ ul {
   padding: 6px 24px;
   border-radius: 4px;
   background-color: var(--color_back);
+  transition: background-color 500ms linear,
+    transform 500ms cubic-bezier(0.4, 0, 0.2, 1) 500ms;
 }
 
 .filter_button:hover {
@@ -180,11 +182,12 @@ ul {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  text-align: center;
   background-color: rgba(238, 238, 238, 1);
   border-radius: 4px;
   border: 0px solid;
   cursor: pointer;
+  width: 370px;
+  height: 404px;
 }
 .card_port {
   flex-basis: calc((100% - 60px) / 3);
@@ -196,7 +199,8 @@ ul {
 }
 
 .item {
-  background-color: var(--color_white);
+  width: 322px;
+  height: 72px;
 }
 
 .icon_navi {
@@ -204,7 +208,8 @@ ul {
   width: 16px;
   height: 12px;
   gap: 10px;
-  transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 500ms linear,
+    transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover .icon_navi {
@@ -215,7 +220,8 @@ ul {
   align-items: center;
   gap: 10px;
   color: var(--font2-color);
-  transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 500ms linear,
+    transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .link:hover {
@@ -316,7 +322,7 @@ h3 {
 }
 .parrafo {
   display: flex;
-  justify-content: center;
+  justify-content: start;
   align-items: center;
   color: var(--font2-color);
   font-family: Roboto;
@@ -487,8 +493,8 @@ h3 {
   height: 44px;
   color: var(--color_icons);
   background-color: var(--color_white);
-  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-  background-color: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 500ms linear,
+    transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .list_networks:hover {
@@ -512,6 +518,10 @@ h3 {
   justify-content: space-between;
   flex-wrap: wrap;
   gap: 25px;
+}
+.d_customer {
+  transition: background-color 500ms linear,
+    transform 500ms cubic-bezier(0.4, 0, 0.2, 1) 500ms;
 }
 
 .items_img {
@@ -543,7 +553,6 @@ h3 {
   width: 170px;
   height: 81px;
   cursor: pointer;
-  transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .items_customer:hover .icon_customer,
 .items_customer:hover {
@@ -571,7 +580,6 @@ h3 {
   line-height: 16px;
   letter-spacing: 3%;
   color: var(--color_white);
-  transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .title_f_networks {
@@ -586,6 +594,8 @@ h3 {
   border-radius: 50%;
   width: 44px;
   height: 44px;
+  transition: background-color 500ms linear,
+    transform 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .list_f_networks:hover {
   background-color: var(--color_hover);
@@ -689,13 +699,22 @@ h3 {
 .form__input {
   width: 448px;
   height: 40px;
-  border-radius: 1px;
-  border-color: var(--button);
+  border-radius: 4px;
+  border: 1px solid var(--color_icons);
   padding: 0px 42px;
+  outline: none;
+}
+.form__input:hover {
+  border: 1px solid var(--color_hover);
 }
 
-.form__input:focus + .form__img {
+.form__input:focus + .form__img,
+.form__input:hover + .form__img {
   color: var(--color_hover);
+}
+.form__input:focus {
+  color: var(--color_hover);
+  border: 2px solid var(--color_hover);
 }
 
 .form__label:hover .form__img {
@@ -781,8 +800,8 @@ h3 {
   color: var(--color_white);
   width: 358px;
   height: 50px;
-  border: 1px;
-  border-color: var(--color_white);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  outline: none;
 }
 
 .foot__button {
