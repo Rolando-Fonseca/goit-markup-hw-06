@@ -118,6 +118,7 @@ ul {
   height: 168px;
   color: var(--color_white);
   background-color: rgba(33, 150, 243, 0.9);
+  margin: 0%;
 }
 
 .port_text {
@@ -182,14 +183,11 @@ ul {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  background-color: rgba(238, 238, 238, 1);
-  border-radius: 4px;
-  border: 0px solid;
+  background-color: var(--color_white);
+  border: 2px solid rgba(238, 238, 238, 1);
   cursor: pointer;
   width: 370px;
   height: 404px;
-}
-.card_port {
   flex-basis: calc((100% - 60px) / 3);
 }
 
@@ -198,9 +196,33 @@ ul {
     0px 4px 4px 0px rgba(0, 0, 0, 0.06);
 }
 
-.item {
+.card__item {
+  font-family: Roboto;
+  font-weight: 700;
+  size: 18px;
+  line-height: 1.714;
+  letter-spacing: 0.42px;
+  padding-left: 24px;
+  padding-top: 20px;
   width: 322px;
-  height: 72px;
+  height: 36px;
+}
+
+.card__parrafo {
+  display: flex;
+  justify-content: start;
+  align-items: center;
+  color: var(--font2-color);
+  font-family: Roboto;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.714;
+  letter-spacing: 0.42px;
+  width: 322px;
+  height: 30px;
+  padding-left: 6px;
+  padding-bottom: 20px;
 }
 
 .icon_navi {
@@ -319,20 +341,6 @@ h3 {
   line-height: normal;
   letter-spacing: 0.42px;
   text-transform: uppercase;
-}
-.parrafo {
-  display: flex;
-  justify-content: start;
-  align-items: center;
-  color: var(--font2-color);
-  font-family: Roboto;
-  font-size: 14px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 1.714;
-  letter-spacing: 0.42px;
-  width: 270px;
-  height: 75px;
 }
 
 .parrafo_team {
@@ -758,6 +766,7 @@ h3 {
   fill: var(--color_hover);
   opacity: 0;
   visibility: visible;
+  margin-top: 17px;
 }
 
 .checkbox-unchecked {
@@ -766,6 +775,7 @@ h3 {
   position: absolute;
   opacity: 1;
   visibility: visible;
+  margin-top: 17px;
 }
 .checkbox:checked ~ .checkbox-unchecked {
   opacity: 1;
@@ -780,6 +790,7 @@ h3 {
   color: var(--font2-color);
   width: 400px;
   height: 24px;
+  margin-left: 24px;
 }
 
 .check__bt {
@@ -811,7 +822,7 @@ h3 {
   color: var(--color_white);
   width: 358px;
   height: 50px;
-
+  padding-left: 16px;
   border: 1px solid rgba(255, 255, 255, 0.3);
   outline: none;
 }
